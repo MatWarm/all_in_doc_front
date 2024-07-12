@@ -303,7 +303,11 @@ export default {
           <span class="d3">.</span>
         </div>
         <textarea id="input" class="police form__input" v-model="prompt" @keyup.enter="addMessage" placeholder="Votre message" rows="1"></textarea>
-        <button @click="addMessage" ref="btnEnvoyer" id="envoyer" class="btn">Envoyer</button>
+        <button @click="addMessage" ref="btnEnvoyer" id="envoyer" class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32" class="icon-2xl">
+            <path fill="currentColor" fill-rule="evenodd" d="M15.192 8.906a1.143 1.143 0 0 1 1.616 0l5.143 5.143a1.143 1.143 0 0 1-1.616 1.616l-3.192-3.192v9.813a1.143 1.143 0 0 1-2.286 0v-9.813l-3.192 3.192a1.143 1.143 0 1 1-1.616-1.616z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
       </div>
     </div>
   </div>
@@ -376,6 +380,7 @@ label {
   line-height: normal;
   text-align: center;
   cursor: pointer;
+  border-radius: 9999px;
 }
 
 .btn--small {
@@ -559,10 +564,10 @@ html, body {
 }
 
 .prompt textarea {
-  width: 60%;
+  width: 40%;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 26px;
   resize: none; /* Empêche le redimensionnement manuel */
   box-sizing: border-box;
   height: auto; /* Démarre avec une hauteur adaptée au contenu */
@@ -570,9 +575,7 @@ html, body {
   max-height: 100px; /* Hauteur maximale avant de devenir scrollable */
 }
 
-.prompt button {
-  padding: 8px 16px; /* Espacement intérieur pour le bouton */
-}
+
 
 .menuVertical {
   display: flex;
